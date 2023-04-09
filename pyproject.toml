@@ -8,7 +8,6 @@ packages = [{include = "codespaces_python_poetry"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-pyflakes = "^3.0.1"
 black = "^23.3.0"
 bandit = "^1.7.5"
 pydocstyle = "^6.3.0"
@@ -19,6 +18,7 @@ pytest = "^7.2.2"
 coverage = "^7.2.2"
 pytest-mock = "^3.10.0"
 nox = "^2022.11.21"
+flake8 = "^6.0.0"
 
 
 [build-system]

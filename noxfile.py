@@ -1,16 +1,13 @@
 import nox
+import tempfile
 
-nox.options.sessions = ["lint", "test"]
-
+nox.options.sessions = ["lint", "test", "scan", "safety"]
 
 @nox.session
 def lint(session):
-    session.install("black", "isort", "flake8", "pydocstyle")
+    session.install("ruff", "black")
+    session.run("ruff check .")
     session.run("black .")
-    session.run("isort .")
-    session.run("flake8")
-    session.run("pydocstyle")
-
 
 @nox.session
 def test(session):
@@ -18,15 +15,27 @@ def test(session):
     session.run("pytest")
     session.notify("coverage")
 
-
 @nox.session
 def coverage(session):
     session.install("coverage")
     session.run("coverage")
-
 
 @nox.session
 def scan(session):
     session.install("bandit", "radon")
     session.run("bandit")
     session.run("radon")
+
+def safety(session):
+    with tempfile.NamedTemporaryFile() as requirements:
+        session.run(
+            "poetry",
+            "export",
+            "--dev",
+            "--format=requirements.txt",
+            "--without-hashes",
+            f"--output={requirements.name}",
+            external=True,
+        )
+        session.install("safety")
+        session.run("safety", "check", f"--file={requirements.name}", "--full-report")

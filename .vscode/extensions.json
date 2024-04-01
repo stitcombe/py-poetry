@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "visualstudioexptteam.vscodeintellicode",
+    "pflannery.vscode-versionlens",
+    "naumovs.theme-oceanicnext",
+    "ms-python.black-formatter",
+    "tamasfe.even-better-toml",
+    "ms-python.isort",
+    "mohsen1.prettify-json",
+    "ms-python.vscode-pylance",
+    "ms-python.python",
+    "ms-python.debugpy",
+    "charliermarsh.ruff"
+  ]
+}

@@ -1,8 +1,9 @@
-# codespaces-python-poetry
+# py-poetry
 
 An opinionated python `poetry` template for GitHub Codespaces!
 
 ## Features
+
 - 🎭 `poetry` for package management
 - 🚧 `ruff`, `black` for linting and styling
 - 🔒 `safety`, `bandit`, `radon` for security scanning

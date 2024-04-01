@@ -1,24 +1,23 @@
 [tool.poetry]
-name = "codespaces-python-poetry"
+name = "py-poetry"
 version = "0.0.1"
-description = "A Python template for Codespaces"
+description = "An opinionated template to scaffold a project quickly"
 authors = ["Stephen Titcombe <40187876+stitcombe@users.noreply.github.com>"]
 readme = "README.md"
-packages = [{include = "codespaces_python_poetry"}]
+packages = [{include = "src"}]
 
 [tool.poetry.dependencies]
-python = "^3.10"
-black = "^23.3.0"
+python = "^3.12"
+black = "^24.3.0"
 radon = "^6.0.1"
-pre-commit = "^3.2.2"
-pytest = "^7.2.2"
-coverage = "^7.2.2"
-pytest-mock = "^3.10.0"
-nox = "^2022.11.21"
-ruff = "^0.0.262"
-bandit = "^1.7.5"
-safety = "^2.3.5"
-
+pre-commit = "^3.7.0"
+pytest = "^8.1.1"
+coverage = "^7.4.4"
+pytest-mock = "^3.14.0"
+nox = "^2024.3.2"
+ruff = "^0.3.4"
+bandit = "^1.7.8"
+safety = "^3.1.0"
 
 [build-system]
 requires = ["poetry-core"]

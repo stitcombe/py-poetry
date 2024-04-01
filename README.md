@@ -1,6 +1,6 @@
-# py-poetry
+# Python + Poetry
 
-An opinionated python `poetry` template for GitHub Codespaces!
+An opinionated template to scaffold a project quickly 🚀
 
 ## Features
 

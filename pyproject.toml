@@ -19,6 +19,11 @@ ruff = "^0.3.4"
 bandit = "^1.7.8"
 safety = "^3.1.0"
 
+[tool.poetry.group.dev.dependencies]
+debugpy = "^1.6.7"
+python-lsp-server = {extras = ["yapf", "rope", "pyflakes", "flake8"], version = "^1.7.2"}
+toml = "^0.10.2"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

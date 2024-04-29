@@ -8,7 +8,7 @@ packages = [{include = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.12"
-black = "^24.3.0"
+black = "^24.4.2"
 radon = "^6.0.1"
 pre-commit = "^3.7.0"
 pytest = "^8.1.1"
